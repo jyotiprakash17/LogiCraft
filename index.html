@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Symbolic Logic Cheat Sheet</title>
+    <link rel="stylesheet" href="truth.css">
+    <script src="jquery.js"></script>
+    <script src="truth.js"></script>
+</head>
+
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle">Dark Mode</button>
+
+    <div class="container">
+        <div id="guide">
+            <h1>Recognized Operators</h1>
+            <p>In order of decreasing precedence.</p>
+            <ul>
+                <li><strong>&amp;</strong> and</li>
+                <li><strong>|</strong> or</li>
+                <li><strong>^</strong> xor</li>
+                <li><strong>~</strong> not</li>
+                <li><strong>!</strong> not</li>
+            </ul>
+        </div>
+
+        <div id="controls">
+            <h1>Enter a Logic Expression</h1>
+            <form id="theform">
+                <input type="text" id="expr" placeholder="Enter your logic expression here" />
+                <input type="submit" value="Apply">
+            </form>
+
+            <h1>Truth Table</h1>
+            <div id="output">
+                <div id="nothing">Nothing yet.</div>
+                <div id="combo"></div>
+                <div id="ast"></div>
+                <div id="sym"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            truth.main();
+        });
+
+        // Dark Mode Toggle Script
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // Function to toggle dark mode and update button text
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                toggleButton.textContent = 'Light Mode';  // Change button text to Light Mode
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                toggleButton.textContent = 'Dark Mode';  // Change button text to Dark Mode
+            }
+        });
+
+        // Check if dark mode is already enabled
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            toggleButton.textContent = 'Light Mode';  // Change button text to Light Mode if dark mode is enabled
+        }
+    </script>
+</body>
+
+</html>

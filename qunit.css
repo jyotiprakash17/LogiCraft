@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f7f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styles */
+h1#qunit-header {
+    background-color: #0d3349;
+    color: #fff;
+    font-size: 1.8em;
+    padding: 1em;
+    margin: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* List Items and Hover Effects */
+ol#qunit-tests {
+    font-family: "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-size: small;
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    background-color: #f4f7f8;
+}
+
+ol#qunit-tests li {
+    padding: 0.4em 0.5em 0.4em 2.5em;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+ol#qunit-tests li:hover {
+    background-color: #e0e7f1;
+    transform: scale(1.02);
+}
+
+ol#qunit-tests li.pass {
+    background-color: #d2e0e6;
+    color: #528ce0;
+    border-left: 4px solid #66c7f4;
+}
+
+ol#qunit-tests li.fail {
+    background-color: #ee5757;
+    color: #fff;
+    border-left: 4px solid #d83131;
+}
+
+ol#qunit-tests li.pass:before {
+    content: "✔ ";
+    color: #5e740b;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+ol#qunit-tests li.fail:before {
+    content: "✘ ";
+    color: #710909;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+/* For nested lists (e.g., test results within tests) */
+ol#qunit-tests li ol {
+    box-shadow: inset 0px 2px 13px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5em;
+    margin-left: 0;
+    padding: 0.5em;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+}
+
+ol#qunit-tests li li {
+    margin: 0.5em;
+    background-color: #f9f9f9;
+    padding: 0.4em 0.5em;
+    transition: background-color 0.2s ease;
+}
+
+ol#qunit-tests li li:hover {
+    background-color: #f2f7fb;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    ol#qunit-tests {
+        font-size: medium; /* Adjust text size for readability */
+    }
+
+    ol#qunit-tests li {
+        padding: 0.8em 1em; /* Increase padding for touch devices */
+    }
+
+    h1#qunit-header {
+        font-size: 1.5em; /* Resize header for smaller screens */
+    }
+
+    /* Stacked layout for smaller screens */
+    .container {
+        grid-template-columns: 1fr; /* Stack the columns */
+        padding: 1em;
+    }
+
+    /* Ensure guide and controls boxes don't overflow */
+    #guide, #controls {
+        max-width: 100%;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode #qunit-header {
+    background-color: #333;
+}
+
+body.dark-mode ol#qunit-tests li {
+    background-color: #2a2a2a;
+    border-left: 4px solid #2196f3;
+}
+
+body.dark-mode ol#qunit-tests li:hover {
+    background-color: #444;
+}
+
+body.dark-mode ol#qunit-tests li.pass {
+    background-color: #4caf50;
+    color: white;
+}
+
+body.dark-mode ol#qunit-tests li.fail {
+    background-color: #d83131;
+    color: white;
+}
+
+body.dark-mode ol#qunit-tests li li {
+    background-color: #3a3a3a;
+    color: #ddd;
+}
+
+body.dark-mode ol#qunit-tests li li:hover {
+    background-color: #555;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #388e3c;
+}
