@@ -10,7 +10,7 @@
   - `^` (XOR) 🔀
   - `~` (NOT) ❌
   - `!` (NOT) ❌
-- **Dark Mode Support**: A toggle to switch between light and dark themes for comfortable reading. 🌙
-- **Responsive Design**: The application is fully responsive, ensuring smooth experience across devices (desktop, tablet, and mobile). 📱💻
-- **User-Friendly Interface**: Simple and intuitive UI for easy interaction with the logic operators and expressions. 🖱️
+- **Dark Mode Support**: A toggle to switch between light and dark themes for comfortable reading. 
+- **Responsive Design**: The application is fully responsive, ensuring smooth experience across devices (desktop, tablet, and mobile). 
+- **User-Friendly Interface**: Simple and intuitive UI for easy interaction with the logic operators and expressions. 
 
