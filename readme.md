@@ -1,22 +1,16 @@
-# NAME AND INTRODUCTION OF THE PROJECT:
-## Truth Table Generator -
--A simple JavaScript application for generating truth tables for arbitrary boolean expressions
--Truth Table Generator is a simple web app to help users make truth tables quickly and easily.
--It supports the functions AND, OR, NAND, NOR, and NOT. Other functions such as XOR can be implemented indirectly.
--It also updates the table dynamically as you type, so you don't have to waste time clicking a submit button.
--It is intended for people building simple circuits with logic gates, to check to make sure their circuit will work the way they expect.
--It runs completely in the browser and requires no server side support.
--The parser supports operator precendence.
+# LogiCraft: Instant Symbolic Logic Cheat Sheet 🧠⚙️
 
+**LogiCraft** is an interactive tool designed to help users understand and visualize symbolic logic expressions. It allows users to input logical expressions and generates a truth table for them. This project is intended as a learning resource for symbolic logic, helping both beginners and advanced users grasp the concepts of logical operators and truth values.
 
-# TECH STACK:
-HTML , CSS ,jQuery and Javascript 
+## Features 🌟
+- **Instant Truth Table Generation**: Input logical expressions and get their corresponding truth tables. 📊
+- **Recognized Operators**: Supports common logical operators such as:
+  - `&` (AND) 🤝
+  - `|` (OR) 🔲
+  - `^` (XOR) 🔀
+  - `~` (NOT) ❌
+  - `!` (NOT) ❌
+- **Dark Mode Support**: A toggle to switch between light and dark themes for comfortable reading. 🌙
+- **Responsive Design**: The application is fully responsive, ensuring smooth experience across devices (desktop, tablet, and mobile). 📱💻
+- **User-Friendly Interface**: Simple and intuitive UI for easy interaction with the logic operators and expressions. 🖱️
 
-# SNAPSHOT OF THE WEBSITE:
-![truth table ](https://user-images.githubusercontent.com/84632701/214133707-6c8dfb74-3a5d-439d-a1ab-bc4f06c2672b.png)
-
-
-# CONTRIBUTED BY:
-Alisha Bharti 
-
-Hope it would be very helpful for the students !!
